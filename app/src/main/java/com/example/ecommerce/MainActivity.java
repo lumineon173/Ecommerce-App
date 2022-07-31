@@ -1,4 +1,4 @@
-package com.example.Ecommerce;
+package com.example.ecommerce;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,5 +10,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        getSupportFragmentManager().beginTransaction()
+        .add(R.id.mainActivity, new LoginFragment())
+        .commit();
     }
 }
